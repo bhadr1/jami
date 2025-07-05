@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جامعيون - تطبيقك الجامعي الشامل</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light blue-gray background */
+            color: #334155; /* Dark slate gray text */
+        }
+        .hero-section {
+            background: linear-gradient(to right, #6366f1, #8b5cf6); /* Purple gradient */
+            color: white;
+            padding: 8rem 0;
+        }
+        .section-heading {
+            color: #4f46e5; /* Indigo */
+        }
+        .btn-primary {
+            background-color: #4f46e5; /* Indigo */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #4338ca; /* Darker indigo */
+        }
+        .nav-link {
+            color: #475569; /* Slate gray */
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #1e293b; /* Darker slate gray */
+        }
+        .feature-card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="text-right">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-indigo-600 rounded-lg p-2">جامعيون</a>
+            <nav class="hidden md:flex space-x-6 space-x-reverse">
+                <a href="#hero" class="nav-link text-lg font-medium rounded-lg p-2 hover:bg-gray-100">الرئيسية</a>
+                <a href="#about" class="nav-link text-lg font-medium rounded-lg p-2 hover:bg-gray-100">عن التطبيق</a>
+                <a href="#features" class="nav-link text-lg font-medium rounded-lg p-2 hover:bg-gray-100">الميزات</a>
+                <a href="#news" class="nav-link text-lg font-medium rounded-lg p-2 hover:bg-gray-100">الأخبار</a>
+                <a href="#contact" class="nav-link text-lg font-medium rounded-lg p-2 hover:bg-gray-100">اتصل بنا</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md mt-2">
+            <nav class="flex flex-col items-center py-4 space-y-2">
+                <a href="#hero" class="nav-link text-lg font-medium w-full text-center py-2 hover:bg-gray-100">الرئيسية</a>
+                <a href="#about" class="nav-link text-lg font-medium w-full text-center py-2 hover:bg-gray-100">عن التطبيق</a>
+                <a href="#features" class="nav-link text-lg font-medium w-full text-center py-2 hover:bg-gray-100">الميزات</a>
+                <a href="#news" class="nav-link text-lg font-medium w-full text-center py-2 hover:bg-gray-100">الأخبار</a>
+                <a href="#contact" class="nav-link text-lg font-medium w-full text-center py-2 hover:bg-gray-100">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-extrabold mb-4 leading-tight">تطبيق جامعيون: رفيقك الأكاديمي الشامل</h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
+                من الجداول الدراسية إلى تسهيل حياة الجامعة، ومن دورات مجانية  إلى ورش عمل، "جامعيون" يجمع كل ما تحتاجه في مكان واحد.
+            </p>
+            <div class="flex justify-center space-x-4 space-x-reverse">
+                <a href="#" class="btn-primary text-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105">
+                    حمل التطبيق الآن
+                </a>
+                <a href="#about" class="btn-primary bg-transparent border-2 border-white hover:bg-white hover:text-indigo-600 text-xl font-semibold shadow-lg transform hover:scale-105">
+                    اكتشف المزيد
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 section-heading">عن تطبيق جامعيون</h2>
+            <p class="text-lg leading-relaxed max-w-4xl mx-auto text-gray-700">
+                تطبيق "جامعيون" هو بوابتك المتكاملة للحياة الجامعية. صمم خصيصاً لتلبية احتياجات الطلاب، من تنظيم جداولهم الدراسية وكل شيئ يخص المواد، إلى ادارة المهام وادارة الميزانية يهدف التطبيق إلى تبسيط التجربة الأكاديمية والاجتماعية للطلاب، مما يتيح لهم التركيز على دراستهم وتحقيق أقصى استفادة من سنواتهم الجامعية.
+            </p>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card p-6 text-center">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">تنظيم أكاديمي</h3>
+                    <p class="text-gray-600">إدارة الجداول، المهام، والمواعيد النهائية بكل سهولة.</p>
+                </div>
+               
+                <div class="feature-card p-6 text-center">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">اقسام لا محدودة</h3>
+                    <p class="text-gray-600">        يشمل التطبيق أقسامًا متنوعة تغطي كل جوانب الحياة الجامعية، منها: المواد الدراسية، إدارة المهام، ميزانية الطالب، البث المباشر، مصادر تعليمية، منتديات طلابية، نصائح دراسية، فعاليات وورش، فرص تطوع، دليل أكاديمي، ودعم فني والمزيد.
+</p>
+                </div>
+               <div class="feature-card p-6 text-center">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">اسأل سؤالك الجامعي</h3>
+                    <p class="text-gray-600">  سواء كنت تواجه صعوبة دراسية، أو عندك استفسار عن تخصصك، أو حتى مشكلة في التسجيل أو الحياة الجامعية... اسأل، والحل عندنا تواصل مع زملائك، المرشدين، أو الكادر الأكاديمي بكل سهولة وخصوصية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 section-heading">ميزات تطبيق جامعيون</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card p-6 text-center">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800">جدول اكاديمي</h3>
+                    <p class="text-gray-600">انشئ جدول للمواد او لتنظيم وقتك</p>
+                </div>
+                <div class="feature-card p-6 text-center">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800">إدارة المهام</h3>
+                    <p class="text-gray-600">تتبع واجباتك، مشاريعك، ومواعيد التسليم الهامة.</p>
+                </div>
+                <div class="feature-card p-6 text-center">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14m-4 4a2 2 0 01-2-2v-6a2 2 0 012-2h2"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800"> </h3>
+                    <p class="text-gray-600">تواصل مع زملائك في الفصول الدراسية والمجموعات.</p>
+                </div>
+                <div class="feature-card p-6 text-center">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800">الموارد الدراسية</h3>
+                    <p class="text-gray-600">نوفر كل شيئ يخص المواد من ملخص للمادة، لمصدر لشرح المداة مجاناً، اسئلة سنوات الى دوسية المادة </p>
+                </div>
+                <div class="feature-card p-6 text-center">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17v2a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h2m0 12V5a2 2 0 012-2h2a2 2 0 012 2v12m-4 0v2a2 2 0 002 2h2a2 2 0 002-2V9m-4 0h.01M7 7h.01"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800">إشعارات فورية</h3>
+                    <p class="text-gray-600">تلقي تنبيهات فورية بالإعلانات الهامة والتحديثات.</p>
+                </div>
+                <div class="feature-card p-6 text-center">
+                    <div class="text-indigo-500 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-800">والمزيد...</h3>
+                    <p class="text-gray-600">هذه نظرة قصيرة اقسامنا لا محدودة ننصحك بتصفح التطبيق </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 section-heading">اتصل بنا</h2>
+            <p class="text-lg leading-relaxed max-w-2xl mx-auto text-gray-700 mb-8">
+                لديك أسئلة أو اقتراحات؟ لا تتردد في التواصل معنا. فريقنا مستعد لمساعدتك.
+            </p>
+            <form class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                <div class="mb-6 text-right">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">الاسم الكامل:</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="اسمك الكامل" required>
+                </div>
+                <div class="mb-6 text-right">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="بريدك الإلكتروني" required>
+                </div>
+                <div class="mb-6 text-right">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">رسالتك:</label>
+                    <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="اكتب رسالتك هنا..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary w-full text-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105">
+                    إرسال الرسالة
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p class="mb-4">&copy; 2025 جامعيون. جميع الحقوق محفوظة.</p>
+            <div class="flex justify-center space-x-4 space-x-reverse">
+                <a href="#" class="text-gray-400 hover:text-white">سياسة الخصوصية</a>
+                <span class="text-gray-400">|</span>
+                <a href="#" class="text-gray-400 hover:text-white">شروط الاستخدام</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
